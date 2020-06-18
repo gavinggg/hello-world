@@ -1,0 +1,37 @@
+[
+    {
+        "constant": true,
+        "input": [
+            {
+                "name": "addr",
+                "type": "FixedHash<20>"
+            }
+        ],
+        "name": "getBalance",
+        "output": "uint64",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [
+            {
+                "name": "addr",
+                "type": "FixedHash<20>"
+            },
+            {
+                "name": "amount",
+                "type": "uint64"
+            }
+        ],
+        "name": "transfer",
+        "output": "void",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [],
+        "name": "init",
+        "output": "void",
+        "type": "Action"
+    }
+]

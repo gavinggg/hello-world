@@ -1,0 +1,67 @@
+[
+    {
+        "constant": false,
+        "input": [],
+        "name": "init",
+        "output": "void",
+        "type": "Action"
+    },
+    {
+        "constant": true,
+        "input": [
+            {
+                "name": "date1",
+                "type": "string"
+            },
+            {
+                "name": "date2",
+                "type": "string"
+            }
+        ],
+        "name": "MonthsBetween2Date",
+        "output": "int32",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [
+            {
+                "name": "my_value",
+                "type": "string"
+            }
+        ],
+        "name": "insertVectorValue",
+        "output": "void",
+        "type": "Action"
+    },
+    {
+        "constant": true,
+        "input": [],
+        "name": "getVectorSize",
+        "output": "uint64",
+        "type": "Action"
+    },
+    {
+        "constant": true,
+        "input": [
+            {
+                "name": "CurrentPage",
+                "type": "uint64"
+            },
+            {
+                "name": "PageMaxSize",
+                "type": "uint64"
+            }
+        ],
+        "name": "getPagingQuery",
+        "output": "string",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [],
+        "name": "destroy_contract",
+        "output": "bool",
+        "type": "Action"
+    }
+]

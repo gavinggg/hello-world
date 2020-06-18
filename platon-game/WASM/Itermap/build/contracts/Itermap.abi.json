@@ -1,0 +1,28 @@
+[
+    {
+        "constant": true,
+        "input": [
+            {
+                "name": "key",
+                "type": "uint8"
+            }
+        ],
+        "name": "get_value",
+        "output": "uint8",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [],
+        "name": "init",
+        "output": "void",
+        "type": "Action"
+    },
+    {
+        "constant": false,
+        "input": [],
+        "name": "info",
+        "output": "uint8",
+        "type": "Action"
+    }
+]

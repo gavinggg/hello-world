@@ -1,0 +1,1287 @@
+{
+  "contractName": "Circulate",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "g",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "x",
+          "type": "uint256"
+        }
+      ],
+      "name": "c",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.5+commit.c5c466fb\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"c\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"g\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/roomqcarry/platon-game/EVM/Circulate/contracts/Circulate.sol\":\"Circulate\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/roomqcarry/platon-game/EVM/Circulate/contracts/Circulate.sol\":{\"keccak256\":\"0x94c8d7869cca4e0bdc85d48f8ff8d3ad3f42dde357844b12657a5d258a0ed375\",\"urls\":[\"bzzr://2bbad6cfc15b434a91bc32fb4694a6869595485bde81709de79fd5b5157c0dd8\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061015b806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80634f8dd50d1461003b578063e2179b8e14610069575b600080fd5b6100676004803603602081101561005157600080fd5b810190808035906020019092919050505061008b565b005b6100716100be565b604051808215151515815260200191505060405180910390f35b5b6001156100bb57806001819055506000800160009054906101000a900460ff16156100b6576100bb565b61008c565b50565b60006100c861011a565b6100d06100dd565b9050806000015191505090565b6100e561011a565b6001156101175760006040518060200160405290816000820160009054906101000a900460ff16151515158152505090505b90565b6040518060200160405280600015158152509056fea165627a7a7230582091914796bf319da42259dff27b58a5e49bb5e43b3eb351ebf596673fa22603380029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80634f8dd50d1461003b578063e2179b8e14610069575b600080fd5b6100676004803603602081101561005157600080fd5b810190808035906020019092919050505061008b565b005b6100716100be565b604051808215151515815260200191505060405180910390f35b5b6001156100bb57806001819055506000800160009054906101000a900460ff16156100b6576100bb565b61008c565b50565b60006100c861011a565b6100d06100dd565b9050806000015191505090565b6100e561011a565b6001156101175760006040518060200160405290816000820160009054906101000a900460ff16151515158152505090505b90565b6040518060200160405280600015158152509056fea165627a7a7230582091914796bf319da42259dff27b58a5e49bb5e43b3eb351ebf596673fa22603380029",
+  "sourceMap": "26:434:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:434:0;;;;;;;",
+  "deployedSourceMap": "26:434:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:434:0;;;;;;;;;;;;;;;;;;;;;;;;304:154;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;304:154:0;;;;;;;;;;;;;;;;;:::i;:::-;;205:93;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;304:154;363:89;369:4;363:89;;;394:1;390;:5;;;;407:1;:3;;;;;;;;;;;;403:39;;;428:5;;403:39;363:89;;;304:154;:::o;205:93::-;238:4;253:11;;:::i;:::-;267:3;:1;:3::i;:::-;253:17;;287:2;:4;;;280:11;;;205:93;:::o;103:92::-;139:10;;:::i;:::-;164:4;161:28;;;177:1;175:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;161:28;103:92;:::o;26:434::-;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.5;\n\n\ncontract Circulate {\n\n    struct S { bool f; }\n    S s;\n    uint v;\n    \n    function h() internal view returns (S memory c) {\n        if(true) {\n\t  c=s;\n        }\n    }\n    \n    function g() public view returns(bool){\n        S memory st = h();\n        return st.f;\n    }\n\n    function c(uint x) public {\n        //无限循环\n        while(true) {\n             v = x;\n\t     if (s.f)\n\t     {\n\t       break;\n\t     }\n        }\n    }\n}\n",
+  "sourcePath": "/home/roomqcarry/platon-game/EVM/Circulate/contracts/Circulate.sol",
+  "ast": {
+    "absolutePath": "/home/roomqcarry/platon-game/EVM/Circulate/contracts/Circulate.sol",
+    "exportedSymbols": {
+      "Circulate": [
+        54
+      ]
+    },
+    "id": 55,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 54,
+        "linearizedBaseContracts": [
+          54
+        ],
+        "name": "Circulate",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Circulate.S",
+            "id": 4,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "f",
+                "nodeType": "VariableDeclaration",
+                "scope": 4,
+                "src": "63:6:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "63:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "S",
+            "nodeType": "StructDefinition",
+            "scope": 54,
+            "src": "52:20:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "s",
+            "nodeType": "VariableDeclaration",
+            "scope": 54,
+            "src": "77:3:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_S_$4_storage",
+              "typeString": "struct Circulate.S"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "S",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4,
+              "src": "77:1:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                "typeString": "struct Circulate.S"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8,
+            "name": "v",
+            "nodeType": "VariableDeclaration",
+            "scope": 54,
+            "src": "86:6:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 20,
+              "nodeType": "Block",
+              "src": "151:44:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 13,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "164:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "falseBody": null,
+                  "id": 19,
+                  "nodeType": "IfStatement",
+                  "src": "161:28:0",
+                  "trueBody": {
+                    "id": 18,
+                    "nodeType": "Block",
+                    "src": "170:19:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 16,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 14,
+                            "name": "c",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11,
+                            "src": "175:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                              "typeString": "struct Circulate.S memory"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 15,
+                            "name": "s",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6,
+                            "src": "177:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_storage",
+                              "typeString": "struct Circulate.S storage ref"
+                            }
+                          },
+                          "src": "175:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                            "typeString": "struct Circulate.S memory"
+                          }
+                        },
+                        "id": 17,
+                        "nodeType": "ExpressionStatement",
+                        "src": "175:3:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 21,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "h",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:2:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11,
+                  "name": "c",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21,
+                  "src": "139:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                    "typeString": "struct Circulate.S"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10,
+                    "name": "S",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4,
+                    "src": "139:1:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                      "typeString": "struct Circulate.S"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:12:0"
+            },
+            "scope": 54,
+            "src": "103:92:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "243:55:0",
+              "statements": [
+                {
+                  "assignments": [
+                    27
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27,
+                      "name": "st",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 34,
+                      "src": "253:11:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                        "typeString": "struct Circulate.S"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 26,
+                        "name": "S",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4,
+                        "src": "253:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                          "typeString": "struct Circulate.S"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 30,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 28,
+                      "name": "h",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "267:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_S_$4_memory_ptr_$",
+                        "typeString": "function () view returns (struct Circulate.S memory)"
+                      }
+                    },
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "267:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                      "typeString": "struct Circulate.S memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "253:17:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "st",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27,
+                      "src": "287:2:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                        "typeString": "struct Circulate.S memory"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "f",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3,
+                    "src": "287:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 25,
+                  "id": 33,
+                  "nodeType": "Return",
+                  "src": "280:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 35,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "g",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "215:2:0"
+            },
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "238:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 23,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:6:0"
+            },
+            "scope": 54,
+            "src": "205:93:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 52,
+              "nodeType": "Block",
+              "src": "330:128:0",
+              "statements": [
+                {
+                  "body": {
+                    "id": 50,
+                    "nodeType": "Block",
+                    "src": "375:77:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 41,
+                            "name": "v",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 8,
+                            "src": "390:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 42,
+                            "name": "x",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37,
+                            "src": "394:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "390:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 44,
+                        "nodeType": "ExpressionStatement",
+                        "src": "390:5:0"
+                      },
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 45,
+                            "name": "s",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6,
+                            "src": "407:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_storage",
+                              "typeString": "struct Circulate.S storage ref"
+                            }
+                          },
+                          "id": 46,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "f",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 3,
+                          "src": "407:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 49,
+                        "nodeType": "IfStatement",
+                        "src": "403:39:0",
+                        "trueBody": {
+                          "id": 48,
+                          "nodeType": "Block",
+                          "src": "418:24:0",
+                          "statements": [
+                            {
+                              "id": 47,
+                              "nodeType": "Break",
+                              "src": "428:5:0"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "369:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "id": 51,
+                  "nodeType": "WhileStatement",
+                  "src": "363:89:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 53,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "c",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "name": "x",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53,
+                  "src": "315:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "314:8:0"
+            },
+            "returnParameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "330:0:0"
+            },
+            "scope": 54,
+            "src": "304:154:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 55,
+        "src": "26:434:0"
+      }
+    ],
+    "src": "0:461:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/roomqcarry/platon-game/EVM/Circulate/contracts/Circulate.sol",
+    "exportedSymbols": {
+      "Circulate": [
+        54
+      ]
+    },
+    "id": 55,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 54,
+        "linearizedBaseContracts": [
+          54
+        ],
+        "name": "Circulate",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Circulate.S",
+            "id": 4,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "f",
+                "nodeType": "VariableDeclaration",
+                "scope": 4,
+                "src": "63:6:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "63:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "S",
+            "nodeType": "StructDefinition",
+            "scope": 54,
+            "src": "52:20:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "s",
+            "nodeType": "VariableDeclaration",
+            "scope": 54,
+            "src": "77:3:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_S_$4_storage",
+              "typeString": "struct Circulate.S"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "S",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4,
+              "src": "77:1:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                "typeString": "struct Circulate.S"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8,
+            "name": "v",
+            "nodeType": "VariableDeclaration",
+            "scope": 54,
+            "src": "86:6:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 20,
+              "nodeType": "Block",
+              "src": "151:44:0",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 13,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "164:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "falseBody": null,
+                  "id": 19,
+                  "nodeType": "IfStatement",
+                  "src": "161:28:0",
+                  "trueBody": {
+                    "id": 18,
+                    "nodeType": "Block",
+                    "src": "170:19:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 16,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 14,
+                            "name": "c",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11,
+                            "src": "175:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                              "typeString": "struct Circulate.S memory"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 15,
+                            "name": "s",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6,
+                            "src": "177:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_storage",
+                              "typeString": "struct Circulate.S storage ref"
+                            }
+                          },
+                          "src": "175:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                            "typeString": "struct Circulate.S memory"
+                          }
+                        },
+                        "id": 17,
+                        "nodeType": "ExpressionStatement",
+                        "src": "175:3:0"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 21,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "h",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "113:2:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11,
+                  "name": "c",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 21,
+                  "src": "139:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                    "typeString": "struct Circulate.S"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 10,
+                    "name": "S",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4,
+                    "src": "139:1:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                      "typeString": "struct Circulate.S"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:12:0"
+            },
+            "scope": 54,
+            "src": "103:92:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "243:55:0",
+              "statements": [
+                {
+                  "assignments": [
+                    27
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 27,
+                      "name": "st",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 34,
+                      "src": "253:11:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                        "typeString": "struct Circulate.S"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 26,
+                        "name": "S",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 4,
+                        "src": "253:1:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_S_$4_storage_ptr",
+                          "typeString": "struct Circulate.S"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 30,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 28,
+                      "name": "h",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "267:1:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_struct$_S_$4_memory_ptr_$",
+                        "typeString": "function () view returns (struct Circulate.S memory)"
+                      }
+                    },
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "267:3:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                      "typeString": "struct Circulate.S memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "253:17:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 31,
+                      "name": "st",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27,
+                      "src": "287:2:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_S_$4_memory_ptr",
+                        "typeString": "struct Circulate.S memory"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "f",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3,
+                    "src": "287:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 25,
+                  "id": 33,
+                  "nodeType": "Return",
+                  "src": "280:11:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 35,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "g",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "215:2:0"
+            },
+            "returnParameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 24,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "238:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 23,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "238:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "237:6:0"
+            },
+            "scope": 54,
+            "src": "205:93:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 52,
+              "nodeType": "Block",
+              "src": "330:128:0",
+              "statements": [
+                {
+                  "body": {
+                    "id": 50,
+                    "nodeType": "Block",
+                    "src": "375:77:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 41,
+                            "name": "v",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 8,
+                            "src": "390:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 42,
+                            "name": "x",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37,
+                            "src": "394:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "390:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 44,
+                        "nodeType": "ExpressionStatement",
+                        "src": "390:5:0"
+                      },
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 45,
+                            "name": "s",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 6,
+                            "src": "407:1:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_S_$4_storage",
+                              "typeString": "struct Circulate.S storage ref"
+                            }
+                          },
+                          "id": 46,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "f",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 3,
+                          "src": "407:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 49,
+                        "nodeType": "IfStatement",
+                        "src": "403:39:0",
+                        "trueBody": {
+                          "id": 48,
+                          "nodeType": "Block",
+                          "src": "418:24:0",
+                          "statements": [
+                            {
+                              "id": 47,
+                              "nodeType": "Break",
+                              "src": "428:5:0"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 40,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "369:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "id": 51,
+                  "nodeType": "WhileStatement",
+                  "src": "363:89:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 53,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "c",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "name": "x",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53,
+                  "src": "315:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "314:8:0"
+            },
+            "returnParameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "330:0:0"
+            },
+            "scope": 54,
+            "src": "304:154:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 55,
+        "src": "26:434:0"
+      }
+    ],
+    "src": "0:461:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.5+commit.c5c466fb.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.19",
+  "updatedAt": "2020-06-09T07:08:28.073Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
